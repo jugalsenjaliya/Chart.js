@@ -1,0 +1,14 @@
+body{
+    /* background-color: rgba(123, 166, 230, 0.2); */
+}
+
+/* hr{
+    border: 0.5px solid rgba(101, 102, 102, 0.4);
+} */
+
+.boxcentent{
+    width: 100%;
+    /* background-color: rgb(128, 23, 16); */
+    font-size: 19px;
+    text-align: center;
+}
