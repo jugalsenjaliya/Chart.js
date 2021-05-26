@@ -272,17 +272,7 @@ var config3 = {
     data: {
         labels: ['FY16','FY17','FY18','FY19'],
         datasets: [
-            {
-            label: "Universal",
-            type: "bar",
-            backgroundColor: "rgba(99, 193, 255, 0.4)",
-            borderColor: "rgba(54, 162, 235, 1)",
-            borderWidth: 1,
-            fill: true,
-            // xAxisID: "axis-bar",
-            yAxisID: 'A',
-            data: [1900,2200,2400,2500]
-        },
+            
         {
             label: "International Margin",
             type: "line",
@@ -303,7 +293,17 @@ var config3 = {
             yAxisID: 'A',
             // xAxisID: "axis-bar",
             data: [200,350,400,500]
-        }]
+        },{
+            label: "XX",
+            type: "bar",
+            backgroundColor: "rgba(101, 102, 102, 0.4)",
+            borderColor: "rgba(54, 162, 235, 1)",
+            borderWidth: 1,
+            fill: true,
+            // xAxisID: "axis-bar",
+            yAxisID: 'A',
+            data: [1900,2200,2400,2500]
+        },]
     },
     options: {
         plugins: {
@@ -313,6 +313,12 @@ var config3 = {
             }
         },
         scales: {
+            x: {
+                stacked: true,
+              },
+            //   y: {
+            //     stacked: true
+            //   },
             A: {
               type: 'linear',
               display: true,
