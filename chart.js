@@ -51,26 +51,6 @@ var config = {
             }
         },
         
-        // scales: {
-        // yAxes: [
-        //     {
-        //       id: 'A',
-        //       type: 'linear',
-        //       position: 'right',
-        //     //   grid:{
-        //     //       drawOnChartArea:false,
-        //     //   }
-        //     },
-        //     // {
-        //     //     id: 'B',
-        //     //     type: 'linear',
-        //     //     position: 'right',
-
-        //     //     grid:{
-        //     //         drawOnChartArea:false,
-        //     //     }
-        //     //   }
-        //   ]}
         scales: {
             B: {
               type: 'linear',
@@ -82,10 +62,9 @@ var config = {
               type: 'linear',
               display: true,
               position: 'right',
-              
       
               grid: {
-                drawOnChartArea: false, // only want the grid lines for one axis to show up
+                drawOnChartArea: false, 
               },
             //   ticks: {
             //     max: 1,
@@ -293,16 +272,17 @@ var config3 = {
     data: {
         labels: ['FY16','FY17','FY18','FY19'],
         datasets: [
-        //     {
-        //     label: "Universal",
-        //     type: "bar",
-        //     backgroundColor: "rgba(99, 193, 255, 0.4)",
-        //     borderColor: "rgba(54, 162, 235, 1)",
-        //     borderWidth: 1,
-        //     fill: true,
-        //     xAxisID: "axis-bar",
-        //     data: [1900,2200,2400,2500]
-        // },
+            {
+            label: "Universal",
+            type: "bar",
+            backgroundColor: "rgba(99, 193, 255, 0.4)",
+            borderColor: "rgba(54, 162, 235, 1)",
+            borderWidth: 1,
+            fill: true,
+            // xAxisID: "axis-bar",
+            yAxisID: 'A',
+            data: [1900,2200,2400,2500]
+        },
         {
             label: "International Margin",
             type: "line",
@@ -311,7 +291,8 @@ var config3 = {
             borderWidth: 1,
             fill: false,
             // xAxisID: "axis-time",
-            data: [1400,1600,1600,2100]
+            yAxisID: 'B',
+            data: [140,170,170,190]
         },{
             label: "Universal",
             type: "bar",
@@ -319,6 +300,7 @@ var config3 = {
             borderColor: "rgba(54, 162, 235, 1)",
             borderWidth: 1,
             fill: true,
+            yAxisID: 'A',
             // xAxisID: "axis-bar",
             data: [200,350,400,500]
         }]
@@ -330,6 +312,27 @@ var config3 = {
                 text: 'Capital Generation'
             }
         },
+        scales: {
+            A: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              
+            },
+            B: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+      
+              grid: {
+                drawOnChartArea: false, 
+              },
+            //   ticks: {
+            //     max: 1,
+            //     min: 0
+            //   }
+            },
+        }
     }
 
 };
@@ -350,7 +353,7 @@ var config4 = {
             fill: false,
             // xAxisID: "axis-time",
             yAxisID: 'B',
-            data: [0,0,88,90]
+            data: [0,0,2.25,2.5]
         },{
             label: "xx",
             type: "bar",
@@ -359,7 +362,7 @@ var config4 = {
             borderWidth: 1,
             fill: true,
             // xAxisID: "axis-bar",
-            // yAxisID: 'A',
+            yAxisID: 'A',
             data: [0,0,88,71]
         }]
     },
@@ -370,36 +373,27 @@ var config4 = {
                 text: 'Operating Profit Drivers(%)'
             }
         },
-        // scales: {
-        //     yAxes: [
-        //         {
-        //           id: 'A',
-        //           stacked: true,
-        //           type: 'linear',
-        //           position: 'left',
-        //         },
-        //         {
-        //             id: 'B',
-        //             type: 'linear',
-        //             position: 'right'
-        //             // scalePositionLeft: true
-        //           }
-        //       ]}
         scales: {
-            yAxes: [{
-              id: 'A',
+            A: {
               type: 'linear',
-              position: 'right',
-            }, {
-              id: 'B',
+              display: true,
+              position: 'left',
+              
+            },
+            B: {
               type: 'linear',
+              display: true,
               position: 'right',
-              ticks: {
-                max: 1,
-                min: 0
-              }
-            }]
-          }
+      
+              grid: {
+                drawOnChartArea: false, 
+              },
+            //   ticks: {
+            //     max: 1,
+            //     min: 0
+            //   }
+            },
+        }
     }
 
 };
