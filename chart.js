@@ -17,8 +17,8 @@ var config = {
             borderWidth: 1,
             fill: false,
             // xAxisID: "axis-time",
-            // yAxisID: 'B',
-            data: [110000,130000,135000,138000]
+            yAxisID: 'A',
+            data: [0.63,0.70,0.75,0.79]
         },{
             label: "Average Market Share(%)",
             type: "line",
@@ -28,7 +28,7 @@ var config = {
             fill: false,
             // xAxisID: "axis-time",
             yAxisID: 'A',
-            data: [55000,60000,65000,65500]
+            data: [0.22,0.25,0.28,0.31]
         },{
             label: "Industry",
             type: "bar",
@@ -51,26 +51,48 @@ var config = {
             }
         },
         
+        // scales: {
+        // yAxes: [
+        //     {
+        //       id: 'A',
+        //       type: 'linear',
+        //       position: 'right',
+        //     //   grid:{
+        //     //       drawOnChartArea:false,
+        //     //   }
+        //     },
+        //     // {
+        //     //     id: 'B',
+        //     //     type: 'linear',
+        //     //     position: 'right',
+
+        //     //     grid:{
+        //     //         drawOnChartArea:false,
+        //     //     }
+        //     //   }
+        //   ]}
         scales: {
-        yAxes: [
-            {
-              id: 'A',
+            B: {
               type: 'linear',
+              display: true,
+              position: 'left',
+              
+            },
+            A: {
+              type: 'linear',
+              display: true,
               position: 'right',
-            //   grid:{
-            //       drawOnChartArea:false,
+              
+      
+              grid: {
+                drawOnChartArea: false, // only want the grid lines for one axis to show up
+              },
+            //   ticks: {
+            //     max: 1,
+            //     min: 0
             //   }
             },
-            // {
-            //     id: 'B',
-            //     type: 'linear',
-            //     position: 'right',
-
-            //     grid:{
-            //         drawOnChartArea:false,
-            //     }
-            //   }
-          ]}
+        }
         
     }
 
