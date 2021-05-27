@@ -1,3 +1,7 @@
+$(window).load(function() {  
+    $("#loader").fadeOut(2000);
+ });
+
 var ctx = document.getElementById('myChart');
 var config = {
     type: 'bar',

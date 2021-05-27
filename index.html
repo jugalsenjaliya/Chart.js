@@ -10,6 +10,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script> 
+
     <link rel="stylesheet" href="style.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.0/chart.min.js"></script>
@@ -22,15 +24,17 @@
 
 
   <body>
-    <div class="container" style="width: 100%;">
-        <div class="row">
+
+    <div id="loader"></div>
+
+    <div id="container" class="container" style="width: 100%;">
+        <div id="row" class="row">
 
             <!-- 1 -->
 
-
             <!-- <div class="col-sm-4" style="box-shadow: 1px 1px 10px #aaaaaa;"> -->
             <div class="col-sm-4">
-                <div style="box-shadow: 0.5px 0.5px 10px #aaaaaa; padding: 10px;margin-top: 5px;">
+                <div class="chartbox" style="box-shadow: 0.5px 0.5px 10px #aaaaaa; padding: 10px;margin-top: 5px;margin-bottom: 30px;">
                     <b><h3>Buisness Profile</h3></b>
                     <div style="display: flex;color: white;">
                         <div class="boxcentent" style="box-shadow: 1px 1px 10px #aaaaaa;padding: 5px;margin-left: 15px;background-color: rgb(128, 23, 16);margin-right: 5px;">
@@ -49,18 +53,30 @@
                                 <div class="col-sm-3"><i class="fa fa-university"></i></div>
                             </div>
                         </div>
-                    </div><hr>
+                    </div>
+                    <hr>
+
+                    <div class="container2">
+                      <div class="line">
+                          <div class="dot dot1"></div>
+                          <div class="dot dot2"></div>
+                          <div class="dot dot3"></div>
+                          <div class="dot dot4"></div>
+                          <div class="dot dot5"></div>
+                      </div>  
+                    </div>
+
                     <div style="text-align: center;font-size: 22px;margin-top: 35px;"><b>GWP KES'M</b></div>
-                    <center><div style="width: 80%;margin-top: 0px;margin-bottom: 12px;">
-                        <canvas id="myChart" width="100" height="100"></canvas>
+                    <center><div style="width: 80%;margin-top: 0px;margin-bottom: 24px;">
+                        <canvas class="chart" id="myChart" width="100" height="100"></canvas>
                     </div></center>
                   </div>
-                  <div style="box-shadow: 0.5px 0.5px 10px #aaaaaa; padding: 10px;margin-top: 5px;margin-bottom: 20px;">
+                  <div class="chartbox" style="box-shadow: 0.5px 0.5px 10px #aaaaaa; padding: 10px;margin-top: 5px;margin-bottom: 20px;">
                     <!-- <hr> -->
                     <b><h3 style="margin-bottom: 20px;">LOB Summary</h3></b>
                     <table class="table table-striped" style="border-top: 3px solid black;border-bottom: 3px solid black;">
                         <thead>
-                          <tr style="border-bottom: 3px solid black;background-color: rgb(233, 232, 232);">
+                          <tr class="trow" style="border-bottom: 3px solid black;background-color: rgb(233, 232, 232);">
                             <!-- <th scope="col">#</th> -->
                             <th scope="col">Table of Earnings<br>diversific action(%)</th>
                             <th scope="col"><center><u>GWP</u></center><br>FY 18</th>
@@ -70,7 +86,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">1</th> -->
                             <td>Aviation</td>
                             <td>0.00</td>
@@ -78,7 +94,7 @@
                             <td>0.00</td>
                             <td>0.00</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">2</th> -->
                             <td>Engineering</td>
                             <td>6.43</td>
@@ -86,7 +102,7 @@
                             <td>2.79</td>
                             <td>1.89</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">3</th> -->
                             <td>Fire Domestic</td>
                             <td>4.17</td>
@@ -94,7 +110,7 @@
                             <td>4.71</td>
                             <td>4.77</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">4</th> -->
                             <td>Fire Industrial</td>
                             <td>26.79</td>
@@ -102,7 +118,7 @@
                             <td>8.10</td>
                             <td>8.84</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">5</th> -->
                             <td>Liability</td>
                             <td>1.77</td>
@@ -110,7 +126,7 @@
                             <td>2.43</td>
                             <td>2.62</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">6</th> -->
                             <td>Margin</td>
                             <td>14.05</td>
@@ -118,7 +134,7 @@
                             <td>15.00</td>
                             <td>13.50</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">7</th> -->
                             <td>Motor Private</td>
                             <td>16.09</td>
@@ -126,7 +142,7 @@
                             <td>23.82</td>
                             <td>23.34</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">8</th> -->
                             <td>Motor Commercial</td>
                             <td>10.28</td>
@@ -134,7 +150,7 @@
                             <td>15.22</td>
                             <td>17.97</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">9</th> -->
                             <td>Personal Accident</td>
                             <td>0.00</td>
@@ -142,7 +158,7 @@
                             <td>0.00</td>
                             <td>0.00</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">10</th> -->
                             <td>Theft</td>
                             <td>0.00</td>
@@ -150,7 +166,7 @@
                             <td>0.00</td>
                             <td>0.00</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">11</th> -->
                             <td>Workmen's Compensation</td>
                             <td>16.71</td>
@@ -158,7 +174,7 @@
                             <td>24.41</td>
                             <td>23.85</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">12</th> -->
                             <td>Medical</td>
                             <td>0.76</td>
@@ -166,7 +182,7 @@
                             <td>1.14</td>
                             <td>1.76</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">13</th> -->
                             <td>Miscellaneous</td>
                             <td>2.94</td>
@@ -174,7 +190,7 @@
                             <td>2.38</td>
                             <td>1.45</td>
                           </tr>
-                          <tr style="border-bottom: 3px solid black;">
+                          <tr class="trow" style="border-bottom: 3px solid black;">
                             <!-- <th scope="row">14</th> -->
                             <td>Guarantee</td>
                             <td>0.00</td>
@@ -182,7 +198,7 @@
                             <td>0.00</td>
                             <td>0.00</td>
                           </tr>
-                          <tr style="color: rgb(69, 80, 243);">
+                          <tr  class="trow" style="color: rgb(69, 80, 243);">
                             <!-- <th scope="row">=</th> -->
                             <td>Total</td>
                             <td>100.00</td>
@@ -199,7 +215,7 @@
 
 
             <div class="col-sm-4">
-                <div style="box-shadow: 0.5px 0.5px 10px #aaaaaa; padding: 10px;margin-top: 5px;">
+                <div class="chartbox" style="box-shadow: 0.5px 0.5px 10px #aaaaaa; padding: 10px;margin-top: 5px;margin-bottom: 30px;">
                     <b><h3>Finicial Profile</h3></b>
                     <div style="display: flex;color: white;">
                         <div class="boxcentent" style="background-color: rgb(51, 218, 112);width: 100%;margin-right: 5px;padding: 5px;box-shadow: 1px 1px 10px #aaaaaa;">
@@ -225,21 +241,34 @@
                         </div>
                     </div>
                     <hr>
+
+                    <div class="container2">
+                      <div class="line">
+                          <div class="dot dot1"></div>
+                          <div class="dot dot2"></div>
+                          <div class="dot dot3"></div>
+                          <div class="dot dot4"></div>
+                          <div class="dot dot5"></div>
+                      </div>  
+                    </div>
+
                     <div style="text-align: center;font-size: 22px;margin-top: 35px;"><b>Underwriting Vs. Technical Margin(%)</b></div>
-                    <center><div style="width: 80%;margin-top: 15px;">
-                        <canvas id="myChart2" width="100" height="100"></canvas>
+                    <center><div style="width: 80%;margin-bottom: 25px;">
+                        <canvas class="chart" id="myChart2" width="100" height="100"></canvas>
                     </div></center>
                   </div>
-                  <div style="box-shadow: 0.5px 0.5px 10px #aaaaaa; padding: 10px;margin-top: 5px;">
+                  
+                  <div class="chartbox" style="box-shadow: 0.5px 0.5px 10px #aaaaaa; padding: 10px;margin-top: 5px;margin-bottom: 30px;">
                     <div style="text-align: center;font-size: 22px;margin-top: 35px;"><b>Capital Generation</b></div>
-                    <center><div style="width: 80%;">
-                        <canvas id="myChart3" width="100" height="100"></canvas>
+                    <center><div style="width: 80%;margin-bottom: 25px;">
+                        <canvas class="chart" id="myChart3" width="100" height="100"></canvas>
                     </div></center>
                   </div>
-                  <div style="box-shadow: 0.5px 0.5px 10px #aaaaaa; padding: 10px;margin-top: 5px;margin-bottom: 25px;">
+                  
+                  <div class="chartbox" style="box-shadow: 0.5px 0.5px 10px #aaaaaa; padding: 10px;margin-top: 5px;margin-bottom: 25px;">
                     <div style="text-align: center;font-size: 22px;margin-top: 35px;"><b>Operating Profit Drivers(%)</b></div>
-                    <center><div style="width: 80%;">
-                        <canvas id="myChart4" width="100" height="100"></canvas>
+                    <center><div style="width: 80%;margin-bottom: 25px;">
+                        <canvas class="chart" id="myChart4" width="100" height="100"></canvas>
                     </div></center>
                 </div>
             </div>
@@ -248,11 +277,11 @@
 
 
             <div class="col-sm-4"">
-                <div style="box-shadow: 0.5px 0.5px 10px #aaaaaa; padding: 10px;margin-top: 5px;">
+                <div class="chartbox" style="box-shadow: 0.5px 0.5px 10px #aaaaaa; padding: 10px;margin-top: 5px;">
                     <b><h3>Modifiers</h3></b>
                     <table class="table table-sm" style="border: 2px solid black;">
                       <thead style="background-color: rgba(211, 211, 211);">
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="col">#</th> -->
                             <th scope="col">Factors</th>
                             <th scope="col">Subfactors</th>
@@ -260,25 +289,25 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">1</th> -->
                             <td>Modifiers</td>
                             <td>Management and Governance</td>
                             <td>Neutral</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">2</th> -->
                             <td>Modifiers</td>
                             <td>Support framework/group dynamics</td>
                             <td>Neutral</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">3</th> -->
                             <td>Modifiers</td>
                             <td>Corporate Profile</td>
                             <td>Neutral</td>
                           </tr>
-                          <tr>
+                          <tr class="trow">
                             <!-- <th scope="row">3</th> -->
                             <td>Modifiers</td>
                             <td>Other Factors</td>
