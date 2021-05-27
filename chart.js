@@ -39,15 +39,21 @@ var config = {
             data: [110000,130000,135000,138000]
         }]
     },
+    
     options: {
         reponsive:true,
         stacked:false,
         plugins: {
+            legend: {
+                display:true,
+                position:'bottom',
+            },
             title: {
                 display: true,
                 // text: "GWP KES'M"
             }
         },
+        
         
         scales: {
             B: {
@@ -109,6 +115,10 @@ var config2 = {
     },
     options: {
         plugins: {
+            legend: {
+                display:true,
+                position:'bottom',
+            },
             title: {
                 display: true,
                 // text: 'Underwriting Vs. Technical Margin(%)'
@@ -128,7 +138,7 @@ var config3 = {
         datasets: [
             
         {
-            label: "International Margin",
+            label: "International Margin (RHR)",
             type: "line",
             backgroundColor: "rgba(7, 120, 196)",
             borderColor: "",
@@ -137,6 +147,16 @@ var config3 = {
             // xAxisID: "axis-time",
             yAxisID: 'B',
             data: [140,170,170,190]
+        },{
+            label: "Dividents",
+            type: "bar",
+            backgroundColor: "rgba(4, 63, 102, 0.4)",
+            borderColor: "rgba(54, 162, 235, 1)",
+            borderWidth: 1,
+            fill: true,
+            yAxisID: 'A',
+            // xAxisID: "axis-bar",
+            data: [0,0,100,100]
         },{
             label: "Universal",
             type: "bar",
@@ -161,9 +181,12 @@ var config3 = {
     },
     options: {
         plugins: {
+            legend: {
+                display:true,
+                position:'bottom',
+            },
             title: {
                 display: true,
-                // text: 'Capital Generation'
             }
         },
         scales: {
@@ -228,6 +251,10 @@ var config4 = {
     },
     options: {
         plugins: {
+            legend: {
+                display:true,
+                position:'bottom',
+            },
             title: {
                 display: true,
                 // text: 'Operating Profit Drivers(%)'
