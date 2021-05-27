@@ -11,9 +11,9 @@
 body{
     /* opacity: 0.9; */
     margin-top: 10px;
-    background: #8e9eab;  
-    background: -webkit-linear-gradient(to right, #cce0e6, #a4cace);
-    background: linear-gradient(to right, #cce0e6, #a4cace);
+    background: white;  
+    /* background: -webkit-linear-gradient(to right, #cce0e6, #a4cace);
+    background: linear-gradient(to right, #cce0e6, #a4cace); */
 }
 
 /* hr{
