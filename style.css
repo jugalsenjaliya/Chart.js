@@ -78,8 +78,8 @@ body{
     background: #fff;
     animation: dotleft 2s cubic-bezier(.72,.03,.75,.54) infinite;
 }
-.dot1{
-}
+/* .dot1{
+} */
 .dot2{
     animation-delay: .4s;
 }
