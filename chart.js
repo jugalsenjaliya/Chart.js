@@ -150,7 +150,7 @@ var config3 = {
         },{
             label: "Dividents",
             type: "bar",
-            backgroundColor: "rgba(4, 63, 102, 0.4)",
+            backgroundColor: "rgba(4, 63, 102, 0.6)",
             borderColor: "rgba(54, 162, 235, 1)",
             borderWidth: 1,
             fill: true,
